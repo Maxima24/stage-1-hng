@@ -372,7 +372,7 @@ throw new HttpException("String does not exist in the system",HttpStatus.NOT_FOU
   const deletedString = this.strings.splice(index, 1)[0];
   this.saveStringsToFile();
   
-  return 
+  return true
 
     }catch(error){
            if (error instanceof HttpException) {
