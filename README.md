@@ -45,7 +45,7 @@ npm run build
 npm run start
 ```
 
-The API will be available at `http://localhost:3000`
+The API will be available at `http://localhost:5000`
 
 ## API Endpoints
 
@@ -86,7 +86,7 @@ Content-Type: application/json
 
 **Request:**
 ```
-GET /strings/search?value=hello
+GET /strings/hello
 ```
 
 **Response (200 OK):**
@@ -133,7 +133,7 @@ GET /strings/all
 
 **Request:**
 ```
-GET /strings/search?is_palindrome=true&min_length=5&max_length=20
+GET /strings?is_palindrome=true&min_length=5&max_length=20
 ```
 
 **Query Parameters:**
@@ -148,29 +148,29 @@ GET /strings/search?is_palindrome=true&min_length=5&max_length=20
 
 Find palindromic strings:
 ```
-GET /strings/search?is_palindrome=true
+GET /strings?is_palindrome=true
 ```
 
 Find strings longer than 10 characters:
 ```
-GET /strings/search?min_length=10
+GET /strings?min_length=10
 ```
 
 Find single-word palindromes:
 ```
-GET /strings/search?is_palindrome=true&word_count=1
+GET /strings?is_palindrome=true&word_count=1
 ```
 
 Find strings containing 'a' that are between 5-15 characters:
 ```
-GET /strings/search?contains_character=a&min_length=5&max_length=15
+GET /strings?contains_character=a&min_length=5&max_length=15
 ```
 
 ### 5. Natural Language Queries
 
 **Request:**
 ```
-GET /strings/natural-language?query=all single word palindromic strings
+GET /strings/find-by-natural-language?query=all single word palindromic strings
 ```
 
 **Available Queries:**
